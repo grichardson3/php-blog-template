@@ -1,0 +1,28 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GR Media</title>
+    <link rel="icon" type="image/svg" href="img/gr-logo-opt.svg"/>
+    <link rel="stylesheet" href="css/foundation.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+  </head>
+  <body>
+  <h1 class="hidden">Home Page</h1>
+    <div id="container">
+      <br>
+      <h2>404 Error :(</h2>
+      <p>The page that you are looking for could not be found.</p><br>
+      <a href="index.php">GO BACK TO THE HOME PAGE</a><br><br>
+    </div>
+	<!--DON'T DELETE!!! -->
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <!-- DON'T DELETE!!! -->
+  </body>
+</html>
