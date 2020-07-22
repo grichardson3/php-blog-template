@@ -1,9 +1,9 @@
 <?php
 	// Set up connection credentials
-	$user = "grich3";
-	$pass = "Dentalfloss3d#";
+	$user = "root";
+	$pass = "";
 	$url = "localhost";
-	$db = "db_portfolioMain";
+	$db = "db_blogTemplate";
 	
 	//$link = mysqli_connect($url, $user, $pass, $db, "8889"); //Mac
 	$link = mysqli_connect($url, $user, $pass, $db); //PC
@@ -13,6 +13,4 @@
 		printf("Connect failed: %s\n", mysqli_connect_error());
 		exit();
 	}
-
-	// echo $db;
 ?>

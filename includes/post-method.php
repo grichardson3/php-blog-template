@@ -1,5 +1,5 @@
 <?php 
-	require_once("includes/phpscripts/config.php");
+	require_once("includes/phpscripts/dbh/config.php");
 	if (isset($_POST['name'])) {
 	    $name = $_POST['name'];
 	    $email = $_POST['email'];

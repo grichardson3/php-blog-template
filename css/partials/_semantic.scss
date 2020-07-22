@@ -1,0 +1,51 @@
+a {
+  color: black;
+  font-weight: 300;
+}
+
+a:hover {
+  color: #666;
+  text-decoration: none;
+}
+
+body {
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+footer {
+  /*Footer color inherited by $footerColor variable*/
+  padding: 1em;
+  position: static;
+  bottom: 0;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+li {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  clear: both;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.875em;
+}
+
+ul {
+  padding-left: 0;
+  float: right;
+}

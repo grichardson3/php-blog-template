@@ -15,8 +15,9 @@
 			<ul>
 				<li><a class="navText" href="index.php">Home</a></li>
 				<li><a class="navText" href="about.php">About</a></li>
-				<li><a class="navText" href="blog.php">Blog</a></li>
 				<li><a class="navText" href="contact.php">Contact</a></li>
+				<li><a class="navText loginButton" href="login.php">Login</a></li>
+				<li><a class="navText signUpButton" href="signUp.php">Sign-Up</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -31,22 +32,16 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a class="nav-link" href="home.php"><h3>HOME</h3></a>
+						<a class="nav-link" href="home.php">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="recent.php"><h3>RECENT</h3></a>
+						<a class="nav-link" href="recent.php">About</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="about.php"><h3>ABOUT ME</h3></a>
+						<a class="nav-link" href="about.php">Blog</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="contact.php"><h3>CONTACT</h3></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="contact.php"><h3>CONTACT</h3></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="contact.php"><h3>CONTACT</h3></a>
+						<a class="nav-link" href="contact.php">Contact</a>
 					</li>
 				</ul>
 			</div>
