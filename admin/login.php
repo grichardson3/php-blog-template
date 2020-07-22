@@ -1,5 +1,5 @@
 <?php
-    require_once("phpscripts/config.php");
+	require_once("phpscripts/config.php");
 	if(isset($_POST['submit'])){
 		//echo "Works";
 		$username = trim($_POST['username']);

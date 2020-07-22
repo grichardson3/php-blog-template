@@ -18,4 +18,7 @@
 	// Font Options
 	$fontFamilyParagraph = "'Raleway'" . ", sans-serif";
 	$fontFamilyHeading = "'Raleway'" . ", sans-serif";
+
+	// Google Analytics ID
+	$gtagID = "UA-133185967-1";
 ?>
