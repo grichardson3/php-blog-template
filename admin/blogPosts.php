@@ -24,7 +24,7 @@
 <html>
 <head>
 	<title>All Posts | <?php $headerTitle ?></title>
-	<?php include_once("../includes/meta.php") ?>
+	<?php include_once("../includes/admin-meta.php") ?>
 </head>
 <body>
 	<div class="container">
@@ -35,7 +35,7 @@
 					echo "<h2>{$row['posts_postheader']}</h2>
 						<p style=\"line-height: 1.5em; margin: 0;\">{$row['posts_user']}</p>
 						<small style=\"padding-top: .5em;\">{$row['posts_date']} - </small>
-						<small><a style=\"margin-top: .5em;\" href=\"editall.php?id={$row['posts_id']}\">Edit Post Details</a></small><br>
+						<small><a style=\"margin-top: .5em;\" href=\"editall.php?id={$row['posts_id']}\">Edit Post Details</a></small><br><br>
 					";
 				}
 			}else{

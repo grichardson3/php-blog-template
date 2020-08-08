@@ -18,18 +18,22 @@
 			<a href="blogPosts.php">All Posts</a><br>
 			<a href="createBlogPost.php">Create Post</a><br>
 		</div>
-		<br>
-		<div id="users">
-			<h3>Users</h3>
-			<a href="createUser.php">Create User</a><br>
-			<a href="editUser.php">Edit User</a><br>
-			<a href="deleteUser.php">Delete User</a><br>
-		</div>
-		<br>
-		<div id="themeCustomization">
-			<h3>Theme Customization</h3>
-			<a href="editTheme.php">Edit Theme</a><br>
-		</div>
+		<?php
+			if($_SESSION['u_userlevel'] == 1){
+				echo "<br>
+				<div id=\"users\">
+					<h3>Users</h3>
+					<a href=\"createUser.php\">Create User</a><br>
+					<a href=\"editUser.php\">Edit User</a><br>
+					<a href=\"deleteUser.php\">Delete User</a><br>
+				</div>
+				<br>
+				<div id=\"themeCustomization\">
+					<h3>Theme Customization</h3>
+					<a href=\"editTheme.php\">Edit Theme</a><br>
+				</div>";
+			}
+		?>
 		<br>
 		<a href="caller.php?caller_id=logout">Sign Out</a><br>
 	</div>

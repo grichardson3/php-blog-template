@@ -18,7 +18,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Login Page</title>
-	<?php include_once("../includes/meta.php") ?>
+	<?php include_once("../includes/admin-meta.php") ?>
 </head>
 <body>
 	<div class="container">
@@ -26,15 +26,16 @@
 		<form action="login.php" method="post">
 			<div class="row">
 				<div class="col-xs-12">
-					<label>Username:</label>
-					<input class="form-control" type="text" name="username" value="">
+					<input class="form-control" type="text" name="username" placeholder="Username">
 				</div>
-				<br><br>
+			</div><br>
+			<div class="row">
 				<div class="col-xs-12">
-					<label>Password:</label>
-					<input class="form-control" type="password" name="password" value="">
+					<input class="form-control" type="password" name="password" placeholder="Password">
 				</div>
-				<input type="submit" name="submit" value="Submit">
+			</div>
+			<div class="row">
+				<button class="btn btn-secondary" type="submit" name="submit" value="Submit">Submit</button>
 			</div>
 		</form>
 	</div>

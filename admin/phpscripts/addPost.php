@@ -13,8 +13,8 @@
 
 	if(isset($_POST['submit'])){
 		if($title == "" || $content == ""){
+			$message = "Please fill out the required fields.";
 			header("Location: ../createBlogPost.php?createPost=error");
-			// $message = "Please fill out the required fields.";
 		}else{
 			$result = mysqli_query($link, $sql);
 			header("Location: ../dashboard.php?createPost=success");

@@ -33,6 +33,7 @@
                             $_SESSION['u_last'] = $row['user_last'];
                             $_SESSION['u_email'] = $row['user_email'];
                             $_SESSION['u_userid'] = $row['user_userid'];
+                            $_SESSION['u_userlevel'] = $row['user_userlevel'];
                             header("Location: dashboard.php");
                             exit();
                         }
