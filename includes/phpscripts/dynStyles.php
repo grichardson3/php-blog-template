@@ -12,8 +12,13 @@
 				body {
 					background-color: #222;
 				}
-
-				h1, h2, h3, h4, h5, h6, label, p {
+				a {
+					color: white;
+				}
+				a:hover {
+					color: #aaa;
+				}
+				h1, h2, h3, h4, h5, h6, label, p, small {
 					color: white;
 				}
 			}";

@@ -1,6 +1,6 @@
 <?php
 	function createUser($fname, $username, $password, $email, $lvllist) {
-		include('connect.php');
+		include('phpscripts/connect.php');
 		$userstring = "INSERT INTO tbl_user VALUES(NULL, '{$fname}', '{$username}', '{$password}', '{$email}', NULL, '{$lvllist}', 'no' )";
 		//echo $userstring;
 		$userquery = mysqli_query($link, $userstring);
@@ -14,7 +14,7 @@
 	}
 
 	function editUser($id, $fname, $username, $password, $email) {
-		include('connect.php');
+		include('phpscripts/connect.php');
 		
 		$updatestring = "UPDATE tbl_user SET user_fname='{$fname}', user_name='{$username}', user_pass='{$password}', user_email='{$email}' WHERE user_id={$id}";
 		$updatequery = mysqli_query($link, $updatestring);
@@ -30,7 +30,7 @@
 	}
 
 	function deleteUser($id) {
-		include('connect.php');
+		include('phpscripts/connect.php');
 		$delstring = "DELETE FROM tbl_user WHERE user_id = {$id}";
 		$delquery = mysqli_query($link, $delstring);
 		if($delquery) {

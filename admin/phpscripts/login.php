@@ -1,7 +1,7 @@
 <?php
 	function logIn($username, $password) {
         if (isset($_POST['submit'])) {
-            require_once("connect.php");
+            require_once("phpscripts/connect.php");
 
             $userid = mysqli_real_escape_string($link, $_POST['username']);
             $pass = mysqli_real_escape_string($link, $_POST['password']);
@@ -10,7 +10,7 @@
             // Check if inputs are empty
 
             if (empty($userid) || empty($pass)) {
-                header("Location: ../login.php?login=empty");
+                header("Location: login.php?login=empty");
                 exit();
             } else {
                 $sql = "SELECT * FROM users WHERE user_userid='$userid' OR user_email='$userid'";
@@ -24,7 +24,6 @@
                         //De-Hashing the password
                         $hashedPassCheck = password_verify($pass, $row['user_pass']);
                         if ($hashedPassCheck == false) {
-                            echo "yeet";
                             header("Location: login.php?login=user-or-password-incorrect");
                             exit();
                         } elseif ($hashedPassCheck == true) {

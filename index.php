@@ -4,7 +4,6 @@
 		<title>Gareth Richardson Media</title>
 		<?php include_once("includes/meta.php") ?>
 		<?php include_once("includes/post-method.php") ?>
-		<?php include_once("includes/gtag.php"); ?>
 	</head>
 	<body>
 		<div id="container">
@@ -27,7 +26,7 @@
 			<section>
 				<h2 class="hidden">Footer</h2>
 				<?php include_once("includes/footer.php"); ?>
-			</section>
+			</div>
 		</div>
 		<!--Scripts-->
 		<?php include_once("includes/scripts.php") ?>

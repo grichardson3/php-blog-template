@@ -1,5 +1,5 @@
 <?php 
-	require_once("admin/connect.php");
+	require_once("./admin/phpscripts/connect.php");
 	if (isset($_POST['name'])) {
 	    $name = $_POST['name'];
 	    $email = $_POST['email'];

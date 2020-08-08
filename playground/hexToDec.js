@@ -1,14 +1,14 @@
 // Hex Converter
-const hexVal = "ffffff"; // Max hex value
+const hexValue = "888888"; // Max hex value
 
 function hexToDec() {
-  return parseInt(hexVal, 16);
+  return parseInt(hexValue, 16);
 }
 
 console.log(hexToDec());
 
 // Binary Converter
-/*const binaryVal = "00000010";
+/*const binaryVal = "11111111";
 
 function binaryToDec() {
   return parseInt(binaryVal, 2);
