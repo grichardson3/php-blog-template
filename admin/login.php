@@ -35,7 +35,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<button class="btn btn-secondary" type="submit" name="submit" value="Submit">Submit</button>
+				<button class="btn btn-secondary" type="submit" name="submit">Submit</button>
 			</div>
 		</form>
 	</div>

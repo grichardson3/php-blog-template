@@ -1,5 +1,6 @@
 <?php
 	require_once('phpscripts/sessions.php');
+	require_once('phpscripts/functions.php');
 	confirm_logged_in();
 ?>
 <!doctype html>

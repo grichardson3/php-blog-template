@@ -6,14 +6,11 @@
             $userid = mysqli_real_escape_string($link, $_POST['username']);
             $pass = mysqli_real_escape_string($link, $_POST['password']);
 
-            // Error handlers
-            // Check if inputs are empty
-
             if (empty($userid) || empty($pass)) {
                 header("Location: login.php?login=empty");
                 exit();
             } else {
-                $sql = "SELECT * FROM users WHERE user_userid='$userid' OR user_email='$userid'";
+                $sql = "SELECT * FROM tbl_users WHERE user_userid='$userid'";
                 $result = mysqli_query($link, $sql);
                 $resultCheck = mysqli_num_rows($result);
                 if ($resultCheck < 1) {

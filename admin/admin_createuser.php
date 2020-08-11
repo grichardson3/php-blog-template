@@ -1,5 +1,7 @@
 <?php
-	require_once('phpscripts/config.php');
+	require_once('phpscripts/sessions.php');
+	require_once('phpscripts/functions.php');
+	require_once('phpscripts/user.php');
 	confirm_logged_in();
 
 	if(isset($_POST['submit'])){
@@ -21,7 +23,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Create User</title>
-	<?php include_once("../includes/meta.php") ?>
+	<?php include_once("../includes/admin-meta.php") ?>
 </head>
 <body>
 	<h2>Create User</h2>

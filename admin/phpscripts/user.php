@@ -1,16 +1,33 @@
 <?php
-	function createUser($fname, $username, $password, $email, $lvllist) {
-		include('phpscripts/connect.php');
-		$userstring = "INSERT INTO tbl_user VALUES(NULL, '{$fname}', '{$username}', '{$password}', '{$email}', NULL, '{$lvllist}', 'no' )";
-		//echo $userstring;
-		$userquery = mysqli_query($link, $userstring);
-		if($userquery) {
-			redirect_to('admin_index.php');
-		}else{
-			$message = "Error creating user.";
-			return $message;
+	function createUser($username, $email, $password, $firstName, $lastName, $userBio, $levelList) {
+		include_once 'phpscripts/connect.php';
+		include_once 'phpscripts/sessions.php';
+		if (!preg_match("/^[a-zA-Z]*$/", $firstName) || 
+			!preg_match("/^[a-zA-Z]*$/", $lastName)
+			/*!preg_match("/^[a-zA-Z0-9]{4,25}*$/", $username)*/
+			) {
+			header("Location: createUser.php?createUser=invalid-credentials");
+			exit();
+		} else {
+			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+				header("Location: createUser.php?createUser=email-invalid");
+				exit();
+			} else {
+				$usernameTakenVal = "SELECT * FROM tbl_users WHERE user_userid = '$username'";
+				$result = mysqli_query($link, $usernameTakenVal);
+				$resultCheck = mysqli_num_rows($result);
+				if ($resultCheck > 0) {
+					header("Location: createUser.php?createUser=user-taken");
+					exit();
+				} else {
+					$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+					$createUserSQL = "INSERT INTO tbl_users (user_id, user_userid, user_email, user_pass, user_first, user_last, user_bio, user_profilepic, user_userlevel) VALUES (NULL, '$username', '$email', '$hashedPassword', '$firstName', '$lastName', '$userBio', NULL, '$levelList');";
+					$result = mysqli_query($link, $createUserSQL);
+					header("Location: dashboard.php?createUser=success");
+				}
+			}
 		}
-		mysqli_close($link);
+		// mysqli_close($link);
 	}
 
 	function editUser($id, $fname, $username, $password, $email) {
