@@ -6,6 +6,7 @@
 	$date = date('F j, Y');
 	$title = $_POST['title'];
 	$content = $_POST['content'];
+	$featureImage = $_FILES['featureimage'];
 
 	$sql = "INSERT INTO posts (posts_user, posts_date, posts_postheader, posts_content) VALUES ('$user','$date','$title','$content');";
 

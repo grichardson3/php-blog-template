@@ -24,7 +24,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>All Users | <?php $headerTitle ?></title>
+	<title>All Users</title>
 	<?php include_once("../includes/admin-meta.php") ?>
 </head>
 <body>
@@ -35,9 +35,9 @@
 				while($row = mysqli_fetch_array($getUsers)){
 					echo "<h3>{$row['user_userid']}</h3>
 						<p style=\"line-height: 1.5em; margin: 0;\">{$row['user_email']}</p>
-						<small style=\"padding-top: .5em;\">{$row['user_first']} {$row['user_last']} - </small>
+						<p style=\"padding-top: .5em;\">{$row['user_first']} {$row['user_last']}</p>
 						<small><a style=\"margin-top: .5em;\" href=\"editAllUsers.php?id={$row['user_id']}\">Edit User Details</a></small><br>
-						<a href=\"phpscripts/caller.php?caller_id=delete&id={$row['user_id']}\"><small>Remove User</small></a><br><br><br>
+						<small><a style=\"color: salmon;\" onClick=\"removeUser();\" href=\"phpscripts/caller.php?caller_id=delete&id={$row['user_id']}\">Remove User</a></small><br><br><br>
 					";
 				}
 			}else{
@@ -46,4 +46,9 @@
 		?>
 	</div>
 </body>
+<script>
+	function removeUser(){
+		confirm("Are you sure you want to delete this user?");
+	}
+</script>
 </html>
