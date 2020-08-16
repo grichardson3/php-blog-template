@@ -1,6 +1,7 @@
 <?php
-	//This file is not called through config.php
-	require_once("phpscripts/config.php");
+	// require_once("phpscripts/config.php");
+	require_once("phpscripts/read.php");
+	require_once("phpscripts/sessions.php");
 
 	if(isset($_GET['caller_id'])){
 		$dir = $_GET['caller_id'];

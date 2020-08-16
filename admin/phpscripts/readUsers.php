@@ -1,5 +1,5 @@
 <?php
-	function getAll($tbl) {
+	function getAllUsers($tbl) {
 		$user = "root";
 		$pass = "";
 		$url = "localhost";
@@ -14,7 +14,7 @@
 			exit();
 		}
 
-		$queryAll = "SELECT * FROM {$tbl} ORDER BY posts_id DESC";
+		$queryAll = "SELECT * FROM {$tbl} ORDER BY user_id ASC";
 		$runAll = mysqli_query($link, $queryAll);
 		if($runAll){
 			return $runAll;
@@ -25,7 +25,7 @@
 		mysqli_close($link);
 	}
 
-	function getSingle($tbl, $col, $id) {
+	function getSingleUser($tbl, $col, $id) {
 		// include('phpscripts/connect.php');
 		$user = "root";
 		$pass = "";

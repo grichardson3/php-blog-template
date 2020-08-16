@@ -8,7 +8,7 @@
 <html>
 	<head>
 		<title>Edit Post Details</title>
-		<?php include_once("../includes/meta.php") ?>
+		<?php include_once("../includes/admin-meta.php") ?>
 	</head>
 	<body>
 		<?php

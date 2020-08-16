@@ -47,11 +47,11 @@
 	}
 
 	function deleteUser($id) {
-		include('phpscripts/connect.php');
-		$delstring = "DELETE FROM tbl_user WHERE user_id = {$id}";
+		include('connect.php');
+		$delstring = "DELETE FROM tbl_users WHERE user_id = {$id}";
 		$delquery = mysqli_query($link, $delstring);
 		if($delquery) {
-			redirect_to("../admin_index.php");
+			header("Location: ../dashboard.php?deleteUser=success");
 		}else{
 			$message = "Error deleting user.";
 			return $message;

@@ -4,7 +4,7 @@
 		$result = getSingle($tbl, $col, $id);
 		$getResult = mysqli_fetch_array($result);
 
-		echo "<form action=\"phpscripts/edit.php\" method=\"post\">";
+		echo "<form action=\"phpscripts/edit.php\" method=\"POST\">";
 		echo "<input hidden name=\"tbl\" value=\"{$tbl}\">";
 		echo "<input hidden name=\"col\" value=\"{$col}\">";
 		echo "<input hidden name=\"id\" value=\"{$id}\">";
@@ -22,10 +22,8 @@
 					echo "<textarea name=\"{$fieldName}\">{$getResult[$i]}</textarea>";
 				}
 			}
-
 		}
 		echo "<input type=\"submit\" name=\"submit\" value=\"Save Content\">";
 		echo "</form>";
 	}
-
 ?>
