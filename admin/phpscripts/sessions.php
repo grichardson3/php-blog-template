@@ -1,4 +1,5 @@
 <?php
+	include_once('functions.php');
 	session_start();
 
 	function confirm_logged_in() {

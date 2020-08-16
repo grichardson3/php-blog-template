@@ -23,15 +23,20 @@
 				echo "<br>
 				<div id=\"users\">
 					<h3>Users</h3>
+					<a href=\"editUser.php\">Edit Profile</a><br><br>
 					<a href=\"allUsers.php\">All Users</a><br>
 					<a href=\"createUser.php\">Create User</a><br>
-					<a href=\"editUser.php\">Edit Profile</a><br>
-					<a href=\"deleteUser.php\">Delete User</a><br>
 				</div>
 				<br>
 				<div id=\"themeCustomization\">
 					<h3>Theme Customization</h3>
 					<a href=\"editTheme.php\">Edit Theme</a><br>
+				</div>";
+			}else{
+				echo "<br>
+				<div id=\"users\">
+					<h3>Users</h3>
+					<a href=\"editUser.php\">Edit Profile</a><br>
 				</div>";
 			}
 		?>

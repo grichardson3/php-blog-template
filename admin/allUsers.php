@@ -35,8 +35,9 @@
 				while($row = mysqli_fetch_array($getUsers)){
 					echo "<h3>{$row['user_userid']}</h3>
 						<p style=\"line-height: 1.5em; margin: 0;\">{$row['user_email']}</p>
-						<small style=\"padding-top: .5em;\">{$row['user_first']}{$row['user_last']} - </small>
-						<small><a style=\"margin-top: .5em;\" href=\"editAllUsers.php?id={$row['user_id']}\">Edit User Details</a></small><br><br>
+						<small style=\"padding-top: .5em;\">{$row['user_first']} {$row['user_last']} - </small>
+						<small><a style=\"margin-top: .5em;\" href=\"editAllUsers.php?id={$row['user_id']}\">Edit User Details</a></small><br>
+						<a href=\"phpscripts/caller.php?caller_id=delete&id={$row['user_id']}\"><small>Remove User</small></a><br><br><br>
 					";
 				}
 			}else{
