@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<?php
-			$tbl = "tbl_posts";
+			$tbl = "posts";
 			$col = "posts_id";
 			$id = $_GET['id'];
 			echo single_edit($tbl, $col, $id);

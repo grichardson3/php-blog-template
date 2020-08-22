@@ -24,7 +24,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>All Posts | <?php $headerTitle ?></title>
+	<title>All Posts</title>
 	<?php include_once("../includes/admin-meta.php") ?>
 </head>
 <body>
