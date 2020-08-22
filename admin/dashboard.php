@@ -23,7 +23,8 @@
 				echo "<br>
 				<div id=\"users\">
 					<h3>Users</h3>
-					<a href=\"editUser.php\">Edit Profile</a><br><br>
+					<a href=\"editUser.php\">Edit Profile</a><br>
+					<a href=\"updatePassword.php\">Update Password</a><br><br>
 					<a href=\"allUsers.php\">All Users</a><br>
 					<a href=\"createUser.php\">Create User</a><br>
 				</div>
@@ -37,6 +38,7 @@
 				<div id=\"users\">
 					<h3>Users</h3>
 					<a href=\"editUser.php\">Edit Profile</a><br>
+					<a href=\"updatePassword.php\">Update Password</a><br>
 				</div>";
 			}
 		?>
