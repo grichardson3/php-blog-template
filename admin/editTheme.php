@@ -12,36 +12,22 @@
 
 	if(isset($_POST['submit'])){
 		include_once 'phpscripts/connect.php';
-		// $password = trim($_POST['password']);
-		$username = trim($_POST['username']);
-		$firstname = trim($_POST['firstname']);
-		$lastname = trim($_POST['lastname']);
-		$userBio = trim($_POST['bio']);
-		$userProfilePic = trim($_POST['userprofilepic']);
 
-		if ($firstname == "" || $lastname == "") {
-			header("Location: editUser.php?editUser=empty");
-			exit();
-		} else {
-			if (!preg_match("/^[a-zA-Z]*$/", $firstname) || !preg_match("/^[a-zA-Z]*$/", $lastname) || !preg_match("/^[a-zA-Z0-9]{4,25}*$/", $username)) {
-				header("Location: editUser.php?editUser=invalid-credentials");
-				exit();
-			} else {
-				$usernameTakenVal = "SELECT * FROM tbl_users WHERE user_userid = '$username'";
-				$result = mysqli_query($link, $usernameTakenVal);
-				$resultCheck = mysqli_num_rows($result);
-				if ($resultCheck > 0) {
-					header("Location: editUser.php?editUser=user-taken");
-					exit();
-				} else {
-					// $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-					$createUserSQL = "UPDATE tbl_users SET user_first = '$firstname', user_last = '$lastname', user_bio = '$userBio' WHERE tbl_users.user_id = '$id';";
-					mysqli_query($link, $createUserSQL);
-					header("Location: dashboard.php?createUser=success");
-					exit();
-				}
-			}
-		}
+		$websiteTitle = trim($_POST['websitetitle']);
+		$footerMessage = trim($_POST['footermessage']);
+		// $websiteLogo = trim($_FILES['websitelogo']);
+		// $logoAsTitle = trim($_POST['logoastitle']);
+		$sliderOnHome = $_POST['slideronhome'];
+		$contactOnHome = $_POST['contactonhome'];
+		$darkMode = $_POST['darkmode'];
+		$navColor = trim($_POST['navcolor']);
+		$footerColor = trim($_POST['footercolor']);
+		$buttonColor = trim($_POST['buttoncolor']);
+
+		$sqlVar = "UPDATE tbl_var SET var_headerTitle = '$websiteTitle', var_footerMsg = '$footerMessage', var_includeSliderOnHome = '$sliderOnHome', var_includeContactOnHome = '$contactOnHome', var_navColor = '$navColor', var_footerColor = '$footerColor', var_buttonColor = '$buttonColor', var_darkMode = '$darkMode' WHERE tbl_var.var_configId = 1;";
+		mysqli_query($link, $sqlVar);
+		header("Location: dashboard.php?editTheme=success");
+		exit();
 	}
 ?>
 <!doctype html>
@@ -60,20 +46,26 @@
 			<input class="form-control" type="text" name="websitetitle" value="<?php echo $info['var_headerTitle'];?>"><br>
 			<label>Footer Message:</label>
 			<input class="form-control" type="text" name="footermessage" value="<?php echo $info['var_footerMsg'];?>"><br>
-			<label>Website Logo:</label>
+			<!--<label>Website Logo:</label>
 			<input style="width: 97px;" type="file" name="websitelogo"><br><br>
 			<label>Use Logo As Title?</label><br>
 			<label>Yes</label><input type="radio" name="logoastitle" value="Yes">
 			<label>No</label><input type="radio" name="logoastitle" value="No"><br><br>
 			<label>Include Featured Image Slider on Home Page?</label><br>
-			<label>Yes</label><input type="radio" name="slideronhome" value="Yes">
-			<label>No</label><input type="radio" name="slideronhome" value="No"><br><br>
+			<label>Yes</label><input type="radio" name="slideronhome" value="1">
+			<label>No</label><input type="radio" name="slideronhome" value="0"><br><br>
 			<label>Include Contact Form on Home Page?</label><br>
-			<label>Yes</label><input type="radio" name="contactonhome" value="Yes">
-			<label>No</label><input type="radio" name="contactonhome" value="No"><br><br>
+			<label>Yes</label><input type="radio" name="contactonhome" value="1">
+			<label>No</label><input type="radio" name="contactonhome" value="0"><br><br>
 			<label>Enable Dark Mode?</label><br>
-			<label>Yes</label><input type="radio" name="darkmode" value="Yes">
-			<label>No</label><input type="radio" name="darkmode" value="No"><br><br>
+			<label>Yes</label><input type="radio" name="darkmode" value="1">
+			<label>No</label><input type="radio" name="darkmode" value="0"><br><br>-->
+			<label>Include Featured Image Slider on Home Page? 1 for Yes, 0 for No</label>
+			<input class="form-control" type="text" name="slideronhome" value="<?php echo $info['var_includeSliderOnHome'];?>"><br>
+			<label>Include Contact Form on Home Page? 1 for Yes, 0 for No</label>
+			<input class="form-control" type="text" name="contactonhome" value="<?php echo $info['var_includeContactOnHome'];?>"><br>
+			<label>Enable Website Dark Mode? 1 for Yes, 0 for No</label>
+			<input class="form-control" type="text" name="darkmode" value="<?php echo $info['var_darkMode'];?>"><br>
 			<label>Navigation Color</label>
 			<input class="form-control" type="text" name="navcolor" value="<?php echo $info['var_navColor'];?>"><br>
 			<label>Footer Color</label>
