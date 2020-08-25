@@ -1,5 +1,5 @@
 <?php
-	include('phpscripts/connect.php');
+	include('connect.php');
 
 	$tbl = $_POST['tbl'];
 	$col = $_POST['col'];
@@ -29,7 +29,7 @@
 	$updatequery = mysqli_query($link, $qstring);
 
 	if($updatequery){
-		header("Location:../../index.php");
+		header("Location:../dashboard.php");
 	}else{
 		echo "Error. Didn't update.";
 	}

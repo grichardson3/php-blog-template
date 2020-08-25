@@ -58,4 +58,17 @@
 		}
 		mysqli_close($link);
 	}
+
+	function deletePost($id) {
+		include('connect.php');
+		$delstring = "DELETE FROM posts WHERE posts_id = {$id}";
+		$delquery = mysqli_query($link, $delstring);
+		if($delquery) {
+			header("Location: ../dashboard.php?deletePost=success");
+		}else{
+			$message = "Error deleting user.";
+			return $message;
+		}
+		mysqli_close($link);
+	}
 ?>

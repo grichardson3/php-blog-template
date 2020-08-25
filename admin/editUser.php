@@ -1,5 +1,5 @@
 <?php
-	// require_once('phpscripts/config.php');
+	require_once('phpscripts/config.php');
 	require_once('phpscripts/read.php');
 	require_once('phpscripts/sessions.php');
 	confirm_logged_in();
@@ -11,8 +11,8 @@
 	$info = mysqli_fetch_array($popForm);
 
 	if(isset($_POST['submit'])){
-		include_once 'phpscripts/connect.php';
-		// $password = trim($_POST['password']);
+		include_once('phpscripts/connect.php');
+
 		$username = trim($_POST['username']);
 		$firstname = trim($_POST['firstname']);
 		$lastname = trim($_POST['lastname']);
@@ -23,20 +23,24 @@
 			header("Location: editUser.php?editUser=empty");
 			exit();
 		} else {
-			if (!preg_match("/^[a-zA-Z]*$/", $firstname) || !preg_match("/^[a-zA-Z]*$/", $lastname) || !preg_match("/^[a-zA-Z0-9]{4,25}*$/", $username)) {
+			if (!preg_match("/^[a-zA-Z]*$/", $firstname) || !preg_match("/^[a-zA-Z]*$/", $lastname)) {
 				header("Location: editUser.php?editUser=invalid-credentials");
 				exit();
 			} else {
 				$usernameTakenVal = "SELECT * FROM tbl_users WHERE user_userid = '$username'";
 				$result = mysqli_query($link, $usernameTakenVal);
 				$resultCheck = mysqli_num_rows($result);
-				if ($resultCheck > 0) {
+				if ($username == $_SESSION['u_userid']) {
+					$editUserSQL = "UPDATE tbl_users SET user_first = '$firstname', user_last = '$lastname', user_userid = '$username', user_bio = '$userBio' WHERE tbl_users.user_id = '$id';";
+					mysqli_query($link, $editUserSQL);
+					header("Location: dashboard.php?createUser=success");
+					exit();
+				} else if ($resultCheck > 0) {
 					header("Location: editUser.php?editUser=user-taken");
 					exit();
 				} else {
-					// $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-					$createUserSQL = "UPDATE tbl_users SET user_first = '$firstname', user_last = '$lastname', user_bio = '$userBio' WHERE tbl_users.user_id = '$id';";
-					mysqli_query($link, $createUserSQL);
+					$editUserSQL = "UPDATE tbl_users SET user_first = '$firstname', user_last = '$lastname', user_userid = '$username', user_bio = '$userBio' WHERE tbl_users.user_id = '$id';";
+					mysqli_query($link, $editUserSQL);
 					header("Location: dashboard.php?createUser=success");
 					exit();
 				}
@@ -54,7 +58,7 @@
 <body>
 	<div class="container">
 		<br><h2>Edit Profile</h2><br>
-		<?php if(!empty($message)){echo $message;} ?>
+		<?php if(!empty($message)){echo $message;}?>
 		<form action="editUser.php" method="POST">
 			<label>First Name:</label>
 			<input class="form-control" type="text" name="firstname" value="<?php echo $info['user_first'];?>"><br>

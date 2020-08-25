@@ -33,7 +33,7 @@
 		<?php if(!empty($message)){echo $message;} ?>
 		<form action="updatePassword.php" method="POST">
 			<label>Update Password:</label>
-			<input class="form-control" type="password" name="password" value=""><br>
+			<input class="form-control" type="password" name="password"><br>
 			<button class="btn btn-secondary" type="submit" name="submit">Update Password</button>
 		</form>
 	</div>

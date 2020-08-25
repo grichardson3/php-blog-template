@@ -36,8 +36,7 @@
 					echo "<h3>{$row['user_userid']}</h3>
 						<p style=\"line-height: 1.5em; margin: 0;\">{$row['user_email']}</p>
 						<p style=\"padding-top: .5em;\">{$row['user_first']} {$row['user_last']}</p>
-						<small><a style=\"margin-top: .5em;\" href=\"editAllUsers.php?id={$row['user_id']}\">Edit User Details</a></small><br>
-						<small><a style=\"color: salmon;\" onClick=\"removeUser();\" href=\"phpscripts/caller.php?caller_id=delete&id={$row['user_id']}\">Remove User</a></small><br><br><br>
+						<small><a style=\"color: salmon;\" href=\"phpscripts/caller.php?caller_id=delete&id={$row['user_id']}\">Remove User</a></small><br><br><br>
 					";
 				}
 			}else{
@@ -46,9 +45,4 @@
 		?>
 	</div>
 </body>
-<script>
-	function removeUser(){
-		confirm("Are you sure you want to delete this user?");
-	}
-</script>
 </html>

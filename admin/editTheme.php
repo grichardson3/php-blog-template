@@ -11,7 +11,7 @@
 	$info = mysqli_fetch_array($popForm);
 
 	if(isset($_POST['submit'])){
-		include_once 'phpscripts/connect.php';
+		include_once('phpscripts/connect.php');
 
 		$websiteTitle = trim($_POST['websitetitle']);
 		$footerMessage = trim($_POST['footermessage']);
@@ -46,6 +46,9 @@
 			<input class="form-control" type="text" name="websitetitle" value="<?php echo $info['var_headerTitle'];?>"><br>
 			<label>Footer Message:</label>
 			<input class="form-control" type="text" name="footermessage" value="<?php echo $info['var_footerMsg'];?>"><br>
+
+			<!--Won't be working on this until I figure out how to compress uploaded images-->
+
 			<!--<label>Website Logo:</label>
 			<input style="width: 97px;" type="file" name="websitelogo"><br><br>
 			<label>Use Logo As Title?</label><br>
@@ -60,6 +63,9 @@
 			<label>Enable Dark Mode?</label><br>
 			<label>Yes</label><input type="radio" name="darkmode" value="1">
 			<label>No</label><input type="radio" name="darkmode" value="0"><br><br>-->
+
+			<!------------------->
+
 			<label>Include Featured Image Slider on Home Page? 1 for Yes, 0 for No</label>
 			<input class="form-control" type="text" name="slideronhome" value="<?php echo $info['var_includeSliderOnHome'];?>"><br>
 			<label>Include Contact Form on Home Page? 1 for Yes, 0 for No</label>

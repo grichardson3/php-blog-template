@@ -37,6 +37,7 @@
 						<p style=\"line-height: 1.5em; margin: 0;\">{$row['posts_user']}</p>
 						<small style=\"padding-top: .5em;\">{$row['posts_date']} - </small>
 						<small><a style=\"margin-top: .5em;\" href=\"editall.php?id={$row['posts_id']}\">Edit Post Details</a></small><br><br>
+						<small><a style=\"color: salmon;\" href=\"phpscripts/caller.php?caller_id=deletePost&id={$row['posts_id']}\">Remove Post</a></small><br><br><br>
 					";
 				}
 			}else{
