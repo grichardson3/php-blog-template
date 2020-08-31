@@ -20,6 +20,11 @@
 
 	$tbl = "tbl_users";
 	$getUsers = getAllUsers($tbl);
+
+	if ($_SESSION['u_userlevel'] == 0) {
+		header("Location: index.php");
+		exit();
+	}
 ?>
 <!doctype html>
 <html>

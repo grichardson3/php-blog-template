@@ -6,7 +6,7 @@
 					if ($logoAsTitle === true) {
 						echo "<img src=\"" . $logo . "\" alt=\"logo\" class=\"logo\"/>";
 					} else {
-						echo "<h3 class=\"siteTitle\">" . $headerTitle . "</h3>";
+						echo "<h3 id=\"siteTitle\" class=\"siteTitle\">" . $headerTitle . "</h3>";
 					}
 				?>
 			</a>

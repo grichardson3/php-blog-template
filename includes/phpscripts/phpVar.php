@@ -57,7 +57,7 @@
 			// Colours
 			$navColor = $row['var_navColor'] . " !important";
 			$footerColor = $row['var_footerColor'] . " !important";
-			$buttonColor = $row['var_buttonColor'] . " !important";
+			$buttonColor = $row['var_buttonColor'];
 
 			// Dark Theme Toggle
 			$darkMode = $row['var_darkMode'];

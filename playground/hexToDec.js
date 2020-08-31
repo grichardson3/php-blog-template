@@ -1,11 +1,18 @@
 // Hex Converter
-const hexValue = "888888"; // Max hex value
+const hexValue = "808080"; // Max hex value
+const hexReturn = parseInt(hexValue, 16);
 
 function hexToDec() {
-  return parseInt(hexValue, 16);
+  return hexReturn;
 }
 
-console.log(hexToDec());
+if (hexReturn >= 8421504) {
+  console.log(hexReturn);
+  document.getElementById("siteTitle").style.color = "white";
+} else {
+  console.log("error");
+  document.getElementById("siteTitle").style.color = "white";
+}
 
 // Binary Converter
 /*const binaryVal = "11111111";

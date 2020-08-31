@@ -4,7 +4,6 @@
 		<title>Gareth Richardson Media</title>
 		<?php include_once("includes/meta.php") ?>
 		<?php include_once("includes/post-method.php") ?>
-		<?php include_once("includes/gtag.php"); ?>
 	</head>
 	<body>
 		<div id="container">

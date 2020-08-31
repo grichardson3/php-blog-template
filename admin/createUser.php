@@ -1,6 +1,11 @@
 <?php
 	require_once('phpscripts/sessions.php');
 	confirm_logged_in();
+
+	if ($_SESSION['u_userlevel'] == 0) {
+		header("Location: index.php");
+		exit();
+	}
 ?>
 <!doctype html>
 <html>

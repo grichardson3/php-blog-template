@@ -16,6 +16,15 @@ body {
   overflow-x: hidden;
 }
 
+.btn {
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #004690;
+  transition: 0.3s ease;
+}
+
 footer {
   /*Footer color inherited by $footerColor variable*/
   padding: 1em;
