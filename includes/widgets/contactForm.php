@@ -1,14 +1,14 @@
-<section>
+<section style="padding-top: 6em; padding-bottom: 6em;">
 	<h2 class="hidden">Contact Form</h2>
-	<div class="centerContent row">
+	<div class="row">
 	<div class="col-xs-12">
-		<div id="contactFormCon">
+		<div>
 			<div class="spacer"></div>
 			<h1 style="text-align: center; text-transform: uppercase; font-weight: 700; font-size: 4.5em;">Contact</h1>
 			<div class="spacer"></div>
 			<h2 class="itemHeader">Let's Collaborate!</h2>
 			<p style="text-align: center;">If you have any ideas for a future project, feel free to fill out the information in the contact form below and I will get in touch with you as soon as I can!</p>
-			<form action="contact.php" method="post">
+			<form action="contact.php" method="POST">
 				<div class="form-group">
 					<label>Name</label>
 					<input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="John Appleseed" >

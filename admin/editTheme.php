@@ -24,12 +24,13 @@
 		// $logoAsTitle = trim($_POST['logoastitle']);
 		$sliderOnHome = $_POST['slideronhome'];
 		$contactOnHome = $_POST['contactonhome'];
+		$postsOnHome = $_POST['postsonhome'];
 		$darkMode = $_POST['darkmode'];
 		$navColor = trim($_POST['navcolor']);
 		$footerColor = trim($_POST['footercolor']);
 		$buttonColor = trim($_POST['buttoncolor']);
 
-		$sqlVar = "UPDATE tbl_var SET var_headerTitle = '$websiteTitle', var_footerMsg = '$footerMessage', var_includeSliderOnHome = '$sliderOnHome', var_includeContactOnHome = '$contactOnHome', var_navColor = '$navColor', var_footerColor = '$footerColor', var_buttonColor = '$buttonColor', var_darkMode = '$darkMode' WHERE tbl_var.var_configId = 1;";
+		$sqlVar = "UPDATE tbl_var SET var_headerTitle = '$websiteTitle', var_footerMsg = '$footerMessage', var_includeSliderOnHome = '$sliderOnHome', var_includeContactOnHome = '$contactOnHome', var_includePostsOnHome = '$postsOnHome', var_navColor = '$navColor', var_footerColor = '$footerColor', var_buttonColor = '$buttonColor', var_darkMode = '$darkMode' WHERE tbl_var.var_configId = 1;";
 		mysqli_query($link, $sqlVar);
 		header("Location: dashboard.php?editTheme=success");
 		exit();
@@ -75,15 +76,19 @@
 				<label>No</label><input type="radio" name="darkmode" value="0"><br><br>-->
 
 				<!------------------->
-				<div class="col-xs-12 col-md-4">
+				<div class="col-xs-12 col-md-3">
 					<label>Include Featured Image Slider on Home Page? 1 for Yes, 0 for No</label>
 					<input class="form-control" type="text" name="slideronhome" value="<?php echo $info['var_includeSliderOnHome'];?>"><br>
 				</div>
-				<div class="col-xs-12 col-md-4">
-					<label>Include Contact Form on Home Page? <br> 1 for Yes, 0 for No</label>
+				<div class="col-xs-12 col-md-3">
+					<label>Include Contact on Home Page? <br> 1 for Yes, 0 for No</label>
 					<input class="form-control" type="text" name="contactonhome" value="<?php echo $info['var_includeContactOnHome'];?>"><br>
 				</div>
-				<div class="col-xs-12 col-md-4">
+				<div class="col-xs-12 col-md-3">
+					<label>Include Blog Posts on Home? <br> 1 for Yes, 0 for No</label>
+					<input class="form-control" type="text" name="postsonhome" value="<?php echo $info['var_includePostsOnHome'];?>"><br>
+				</div>
+				<div class="col-xs-12 col-md-3">
 					<label>Enable Website Dark Mode? <br> 1 for Yes, 0 for No</label>
 					<input class="form-control" type="text" name="darkmode" value="<?php echo $info['var_darkMode'];?>"><br>
 				</div>

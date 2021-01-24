@@ -26,7 +26,8 @@
 				<label>Email:</label>
 				<input class="form-control" type="text" name="email"><br>
 				<label>Username:</label>
-				<input class="form-control" type="text" name="username"><br>
+				<input class="form-control" type="text" name="username">
+				<small>Username must only contain uppercase letters, lowercase letters, and numbers. No special characters allowed.</small><br><br>
 				<label>Password:</label>
 				<input class="form-control" type="password" name="password"><br>
 				<button class="btn btn-secondary" type="submit" name="submit">Create User</button>

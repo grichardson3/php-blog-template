@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 	<head>
-		<title>Gareth Richardson Media</title>
 		<?php include_once("includes/meta.php") ?>
 		<?php include_once("includes/post-method.php") ?>
 	</head>

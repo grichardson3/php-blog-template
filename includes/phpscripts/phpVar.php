@@ -35,23 +35,33 @@
 			$headerTitle = $row['var_headerTitle'];
 			$footerMsg = $row['var_footerMsg'];
 			$logo = $row['var_logo'];
+
 			$logoAsTitle = $row['var_logoAsTitle'];
 			if($logoAsTitle == 1){
 				$logoAsTitle = true;
 			}else if($logoAsTitle == 0){
 				$logoAsTitle = false;
 			}
+
 			$includeSliderOnHome = $row['var_includeSliderOnHome'];
 			if($includeSliderOnHome == 1){
 				$includeSliderOnHome = true;
 			}else if($includeSliderOnHome == 0){
 				$includeSliderOnHome = false;
 			}
+
 			$includeContactOnHome = $row['var_includeContactOnHome'];
 			if($includeContactOnHome == 1){
 				$includeContactOnHome = true;
 			}else if($includeContactOnHome == 0){
 				$includeContactOnHome = false;
+			}
+
+			$includePostsOnHome = $row['var_includePostsOnHome'];
+			if($includePostsOnHome == 1){
+				$includePostsOnHome = true;
+			}else if($includePostsOnHome == 0){
+				$includePostsOnHome = false;
 			}
 
 			// Colours

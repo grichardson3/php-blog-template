@@ -13,20 +13,27 @@
 				<?php include_once("includes/nav.php"); ?>
 			</section>
 			<?php
-				if ($includeSliderOnHome === true) {
+				if ($includeSliderOnHome == true) {
 					include_once("includes/widgets/landingSlider.php");
 				}
 			?>
-			<?php
-				if ($includeContactOnHome === true) {
-					include_once("includes/widgets/contactForm.php");
-				}
-			?>
+			<div class="container">
+				<?php
+					if ($includePostsOnHome == true) {
+						include_once("includes/widgets/blogPosts.php");
+					}
+				?>
+				<?php
+					if ($includeContactOnHome == true) {
+						include_once("includes/widgets/contactForm.php");
+					}
+				?>
+			</div>
 			<!--Footer-->
 			<section>
 				<h2 class="hidden">Footer</h2>
 				<?php include_once("includes/footer.php"); ?>
-			</div>
+			</section>
 		</div>
 		<!--Scripts-->
 		<?php include_once("includes/scripts.php") ?>

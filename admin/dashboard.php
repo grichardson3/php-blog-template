@@ -12,7 +12,12 @@
 </head>
 <body>
 	<div class="container">
-		<br><h2><?php echo $_SESSION['u_userid'];?></h2><br>
+		<br>
+			<h2>
+				<?php include_once("phpscripts/date-checker.php"); ?>
+				<?php echo $_SESSION['u_first'];?>!
+			</h2>
+		<br>
 		<div id="posts">
 			<h3>Posts</h3>
 			<a href="blogPosts.php">All Posts</a><br>

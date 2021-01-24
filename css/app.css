@@ -66,13 +66,17 @@ ul {
   float: right;
 }
 
-.btn {
-  margin-top: 0.75em;
+.carousel-inner {
+  user-select: none;
 }
 
 .centerContent {
   display: flex;
   justify-content: center;
+}
+
+.col-xs-12 {
+  width: 100%;
 }
 
 #contactFormCon {
@@ -129,6 +133,19 @@ ul {
   border: 1px solid white;
   padding: 0.5em;
   border-radius: 0.5em;
+}
+
+.loginCon {
+  width: 300px;
+  margin: 0 auto;
+}
+
+#loginPage {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vh;
 }
 
 .signUpButton {

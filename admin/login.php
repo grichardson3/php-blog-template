@@ -21,23 +21,26 @@
 	<?php include_once("../includes/admin-meta.php") ?>
 </head>
 <body>
-	<div class="container">
+	<div class="container" id="loginPage">
 		<?php if(!empty($message)){ echo $message;} ?>
-		<form action="login.php" method="post">
-			<div class="row">
-				<div class="col-xs-12">
-					<input class="form-control" type="text" name="username" placeholder="Username">
+		<div class="loginCon">
+			<h1 style="margin-left: -16px; margin-bottom: 16px; font-weight: 700; font-size: 56px;">Login</h1>
+			<form action="login.php" method="post">
+				<div class="row">
+					<div class="col-xs-12">
+						<input class="form-control" type="text" name="username" placeholder="Username">
+					</div>
+				</div><br>
+				<div class="row">
+					<div class="col-xs-12">
+						<input class="form-control" type="password" name="password" placeholder="Password">
+					</div>
+				</div><br>
+				<div class="row">
+					<button class="btn btn-secondary" type="submit" name="submit">Submit</button>
 				</div>
-			</div><br>
-			<div class="row">
-				<div class="col-xs-12">
-					<input class="form-control" type="password" name="password" placeholder="Password">
-				</div>
-			</div>
-			<div class="row">
-				<button class="btn btn-secondary" type="submit" name="submit">Submit</button>
-			</div>
-		</form>
+			</form>
+		</div>
 	</div>
 </body>
 </html>

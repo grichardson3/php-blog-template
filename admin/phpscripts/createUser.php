@@ -8,7 +8,7 @@
 		$username = mysqli_real_escape_string($link, $_POST['username']);
 		$password = mysqli_real_escape_string($link, $_POST['password']);
         
-		$userBio = "Im not interesting at all Nothing to see here";
+		$userBio = "I am not interesting at all. Nothing to see here.";
 		$userProfilePic = $_FILES['profilepic'];
 		$levelList = 0;
 
@@ -18,7 +18,7 @@
 		} else {
 			// include_once 'connect.php';
 			// include_once 'sessions.php';
-			if (!preg_match("/^[a-zA-Z]*$/", $firstname) || !preg_match("/^[a-zA-Z]*$/", $lastname)) {
+			if (!preg_match("/^[a-zA-Z]*$/", $firstname) || !preg_match("/^[a-zA-Z]*$/", $lastname) || !preg_match("/^[a-zA-Z0-9]*$/", $username)) {
 				header("Location: ../createUser.php?createUser=invalid-credentials");
 				exit();
 			} else {

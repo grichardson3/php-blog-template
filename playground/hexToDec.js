@@ -6,13 +6,15 @@ function hexToDec() {
   return hexReturn;
 }
 
-if (hexReturn >= 8421504) {
+console.log(hexReturn);
+
+/*if (hexReturn >= 8421504) {
   console.log(hexReturn);
   document.getElementById("siteTitle").style.color = "white";
 } else {
-  console.log("error");
-  document.getElementById("siteTitle").style.color = "white";
-}
+  console.log(hexReturn);
+  document.getElementById("siteTitle").style.color = "black";
+}*/
 
 // Binary Converter
 /*const binaryVal = "11111111";
