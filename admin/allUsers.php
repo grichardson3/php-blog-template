@@ -30,7 +30,7 @@
 <html>
 <head>
 	<title>All Users</title>
-	<?php include_once("../includes/admin-meta.php") ?>
+	<?php include_once("includes/admin-meta.php") ?>
 </head>
 <body>
 	<div class="container">
