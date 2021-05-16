@@ -1,7 +1,7 @@
 <?php
-	require_once('phpscripts/config.php');
-	require_once('phpscripts/read.php');
+	require_once('phpscripts/connect.php');
 	require_once('phpscripts/sessions.php');
+	require_once('phpscripts/read.php');
 	confirm_logged_in();
 
 	$id = $_SESSION['u_id'];
@@ -11,8 +11,6 @@
 	$info = mysqli_fetch_array($popForm);
 
 	if(isset($_POST['submit'])){
-		include_once('phpscripts/connect.php');
-
 		$username = trim($_POST['username']);
 		$firstname = trim($_POST['firstname']);
 		$lastname = trim($_POST['lastname']);

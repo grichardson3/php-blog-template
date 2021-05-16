@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 	<head>
-		<title>Gareth Richardson Media</title>
+		<title>PHP Blog Template</title>
 		<?php include_once("includes/meta.php") ?>
 		<?php include_once("includes/post-method.php") ?>
 	</head>
@@ -19,9 +19,7 @@
 			?>
 			<div class="container">
 				<?php
-					if ($includePostsOnHome == true) {
-						include_once("includes/widgets/blogPosts.php");
-					}
+					include_once("includes/widgets/blogPosts.php");
 				?>
 				<?php
 					if ($includeContactOnHome == true) {

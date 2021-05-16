@@ -1,10 +1,10 @@
 <?php
 	function getAllVar($tblVar){
 		// include("/admin/phpscripts/connect.php");
+		$url = "localhost";
 		$user = "root";
 		$pass = "";
-		$url = "localhost";
-		$db = "db_blogTemplate";
+		$db = "db_blogtemplate";
 		
 		//$link = mysqli_connect($url, $user, $pass, $db, "8889"); //Mac
 		$link = mysqli_connect($url, $user, $pass, $db); //PC
@@ -55,13 +55,6 @@
 				$includeContactOnHome = true;
 			}else if($includeContactOnHome == 0){
 				$includeContactOnHome = false;
-			}
-
-			$includePostsOnHome = $row['var_includePostsOnHome'];
-			if($includePostsOnHome == 1){
-				$includePostsOnHome = true;
-			}else if($includePostsOnHome == 0){
-				$includePostsOnHome = false;
 			}
 
 			// Colours

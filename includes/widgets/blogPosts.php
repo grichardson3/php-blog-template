@@ -1,23 +1,22 @@
 <?php
-    require_once('admin/phpscripts/read.php');
 	require_once('admin/phpscripts/functions.php');
-
-	/*if(isset($_GET['filter'])){
-		$tbl = "tbl_movies";
-		$tbl2 = "tbl_genre";
-		$tbl3 = "tbl_mov_genre";
-		$col = "movies_id";
-		$col2 = "genre_id";
-		$col3 = "genre_name";
-		$filter = "action";
-		$getMovies = filterResults($tbl, $tbl2, $tbl3, $col, $col2, $col3, $filter);
-	}else{
-		$tbl = "tbl_movies";
-		$getMovies = getAll($tbl);
-	}*/
 
 	$tbl = "posts";
     $getPosts = getAll($tbl);
+
+    function getAll($tbl) {
+		include('admin/phpscripts/connect.php');
+
+		$queryAll = "SELECT * FROM {$tbl} ORDER BY posts_id DESC";
+		$runAll = mysqli_query($link, $queryAll);
+		if($runAll){
+			return $runAll;
+		}else{
+			$error = "There was a problem accessing this information.";
+			return $error;
+		}
+		mysqli_close($link);
+	}
 ?>
 <section style="padding-top: 6em; padding-bottom: 6em;">
     <div class="row">

@@ -25,6 +25,11 @@ body {
   transition: 0.3s ease;
 }
 
+.btn-danger {
+  background: red !important;
+  border: 0;
+}
+
 footer {
   /*Footer color inherited by $footerColor variable*/
   padding: 1em;

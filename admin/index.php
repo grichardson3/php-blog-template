@@ -1,4 +1,4 @@
 <?php
-    include_once("phpscripts/functions.php");
-    redirect_to("dashboard.php"); 
+    include_once("phpscripts/functions.php"); // Imported for redirect_to()
+    redirect_to("dashboard.php");
 ?>

@@ -1,5 +1,5 @@
 <?php
-	include_once('functions.php');
+	include_once('functions.php'); // Import to use redirect_to()
 	session_start();
 
 	function confirm_logged_in() {
