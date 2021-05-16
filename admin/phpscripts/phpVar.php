@@ -1,6 +1,6 @@
 <?php
 	function getAllVar($tblVar){
-		include("admin/phpscripts/connect.php");
+		include("phpscripts/connect.php");
 		
 		$varQuery = "SELECT * FROM tbl_var";
 		$varQueryRun = mysqli_query($link, $varQuery);

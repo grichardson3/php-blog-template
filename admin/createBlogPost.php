@@ -7,7 +7,7 @@
 <html>
 <head>
 	<title>Create Post</title>
-	<?php include_once("../includes/admin-meta.php"); ?>
+	<?php include_once("includes/admin-meta.php"); ?>
 </head>
 <body>
 	<div class="container">

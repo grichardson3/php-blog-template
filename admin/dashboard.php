@@ -8,7 +8,7 @@
 <html>
 <head>
 	<title>Dashboard Page</title>
-	<?php include_once("../includes/admin-meta.php") ?>
+	<?php include_once("includes/admin-meta.php") ?>
 </head>
 <body>
 	<div class="container">
